@@ -11,6 +11,10 @@ angular.module('starter.controllers', [])
     $scope.modal = modal;
   });
 
+  $scope.menuOptions = [
+    { title: 'Login', id: 'login' },
+    { title: 'Projetos', id: 'projetos' }
+  ];
   // Triggered in the login modal to close it
   $scope.closeLogin = function() {
     $scope.modal.hide();
@@ -33,14 +37,17 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('PlaylistsCtrl', function($scope) {
+.controller('PlaylistsCtrl', function($scope, $http) {
+  $http.get('/js/screens_metadata.json').success(function(data) { 
+    console.log(data);
+    });  
+
   $scope.playlists = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
+    { title: 'Elefante Letrado', id: 1 },
+    { title: 'Literatura', id: 2 },
+    { title: 'Tecnologia', id: 3 },
+    { title: 'Entretenimento', id: 4 },
+    { title: 'Agenda Cultural', id: 5 }
   ];
 })
 

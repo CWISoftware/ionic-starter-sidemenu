@@ -12,18 +12,12 @@
       <h1 class="title">Left</h1>
     </header>
     <ion-content class="has-header">
-      <ion-list>
+      <ion-list >
         <ion-item nav-clear menu-close ng-click="login()">
           Login
         </ion-item>
-        <ion-item nav-clear menu-close href="#/app/search">
-          Search
-        </ion-item>
-        <ion-item nav-clear menu-close href="#/app/browse">
-          Browse
-        </ion-item>
-        <ion-item nav-clear menu-close href="#/app/playlists">
-          Playlists
+        <ion-item ng-repeat="menuOption in menuOptions" nav-clear menu-close href="#/app/{{menuOption.id}}">
+          {{menuOption.title}}
         </ion-item>
       </ion-list>
     </ion-content>
