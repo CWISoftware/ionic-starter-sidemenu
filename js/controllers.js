@@ -4,23 +4,13 @@
     // Form data for the login modal
     $scope.loginData = {};
 
-    $scope.page_metadata = {
-      title: 'Opções'
-    }
-
     // Create the login modal that we will use later
     $ionicModal.fromTemplateUrl('templates/login.html', {
       scope: $scope
     }).then(function(modal) {
       $scope.modal = modal;
     });
-
-    $scope.menuOptions = [
-    { title: 'Login', id: 'login' },
-    { title: 'Projetos', id: 'projetos' },
-    { title: 'Áudios', id: 'browse'},
-    { title: 'Pesquisar', id: 'search'}
-    ];
+    
     // Triggered in the login modal to close it
     $scope.closeLogin = function() {
       $scope.modal.hide();
@@ -40,7 +30,17 @@
       $timeout(function() {
         $scope.closeLogin();
       }, 1000);
-    };
+    }; 
+
+    $scope.page_metadata = {
+      title: 'Opções'
+    }
+
+    $scope.menuOptions = [
+    { title: 'Projetos', id: 'projetos' },
+    { title: 'Setores', id: 'browse'},
+    { title: 'Pesquisar', id: 'search'}
+    ];
   })
 
   .controller('PlaylistsCtrl', function($scope, $http) {
@@ -65,6 +65,6 @@
 
   .controller('BrowseCtrl', function($scope) {
    $scope.page_metadata = {
-    title: 'Áudios', initialHTML: 'Este é um conteúdo de testes'
+    title: 'Setores', initialHTML: 'Este é um conteúdo de testes'
   };
 });
