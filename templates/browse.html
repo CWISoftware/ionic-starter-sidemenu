@@ -1,8 +1,10 @@
-<ion-view title="Browse" class = "app-custom">
+<ion-view title="{{page_metadata.title}}" class = "app-custom">
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <ion-nav-buttons side="left">
     <button menu-toggle="left"class="button button-icon icon ion-navicon"></button>
   </ion-nav-buttons>
   <ion-content class="has-header">
-    <h1>CWI browse</h1>
+    <h1 class = "content">{{page_metadata.initialHTML}}</h1>
+    <button id="playMp3iOS" ng-click = "playFirstTrack()">Play Tracks</button>
   </ion-content>
 </ion-view>
