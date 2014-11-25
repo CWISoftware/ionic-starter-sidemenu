@@ -1,6 +1,6 @@
   angular.module('starter.controllers', [])
 
-  .controller('AppCtrl', function($scope, $ionicModal, $timeout) {
+  .controller('AppCtrl', function($scope, $ionicModal, $timeout, $http) {
     // Form data for the login modal
     $scope.loginData = {};
 
@@ -36,11 +36,9 @@
       title: 'Opções'
     }
 
-    $scope.menuOptions = [
-    { title: 'Projetos', id: 'projetos' },
-    { title: 'Setores', id: 'browse'},
-    { title: 'Pesquisar', id: 'search'}
-    ];
+  $http.get('/js/screens_metadata.json').success(function($scope, data) { 
+      $scope.menuOptions = JSON.parse(data);
+    }); 
   })
 
   .controller('PlaylistsCtrl', function($scope, $http) {
