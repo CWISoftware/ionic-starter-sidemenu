@@ -48,6 +48,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
       }
     })
+    //
     .state('app.projetos', {
       url: "/projetos",
       views: {
@@ -58,14 +59,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     })
 
-     .state('app.login', {
-      url: "/login",
-      views: {
-        'menuContent' :{
-          templateUrl: "templates/login.html",
-        }
-      }
-    })
+     //Placeholder for login state, if it wasn't required on generation please ignore this
 
     .state('app.single', {
       url: "/playlists/:playlistId",
