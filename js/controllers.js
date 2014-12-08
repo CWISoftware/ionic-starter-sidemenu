@@ -3,37 +3,32 @@
   .controller('AppCtrl', function($scope, $ionicModal, $timeout, $http) {
 
      //Placeholder for login module, if it wasn't required on generation please ignore this
-    
+
     $scope.page_metadata = {
       title: 'Opções'
     }
 
-  $http.get('/js/screens_metadata.json').success(function($scope, data) { 
-      $scope.menuOptions = JSON.parse(data);
+  $http.get('/js/screens_metadata.json').success(function(data) { 
+      $scope.menuOptions = data;
     }); 
   })
 
   .controller('PlaylistsCtrl', function($scope, $http) {
-    $http.get('/js/screens_metadata.json').success(function(data) { 
-      console.log(data);
-    });  
     $scope.page = {
-      title: 'Projetos'
+      title: 'Projects'
     }
 
     $scope.playlists = [
-    { title: 'Elefante Letrado', id: 1 },
-    { title: 'Portal Renner PPF', id: 2 },
-    { title: 'Portal Lojas Colombo', id: 3 },
-    { title: 'Sitema Unimed', id: 4 },
-    { title: 'Agenda Cultural', id: 5 }
+    { title: 'Option #1', id: 1 },
+    { title: 'Option #2', id: 2 },
+    { title: 'Option #3', id: 3 },
+    { title: 'Option #4', id: 4 },
+    { title: 'Option #5', id: 5 }
     ];
   })
 
   .controller('PlaylistCtrl', function($scope, $stateParams) {
   })
-
- 
   
   .controller('BrowseCtrl', function($scope) {
    $scope.page_metadata = {
