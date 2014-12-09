@@ -9,6 +9,7 @@
     }
 
   $http.get('/js/screens_metadata.json').success(function(data) { 
+      alert(data.toString());
       $scope.menuOptions = data;
     }); 
   })
