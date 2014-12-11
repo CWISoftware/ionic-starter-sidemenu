@@ -4,35 +4,13 @@
 
      //Placeholder for login module, if it wasn't required on generation please ignore this
 
-    $scope.page_metadata = {
-      title: 'Opções'
-    }
-
-  $http.get('/js/screens_metadata.json').success(function(data) { 
-      alert(data.toString());
-      $scope.menuOptions = data;
-    }); 
+    $scope.menuOptions = [
+    {"title":"TAPPPPPP","uri":"/projetos", "initialHTML": "Este é um conteúdo de testes 1"},
+    {"title":"Setores","uri":"/setores","initialHTML": "Este é um conteúdo de testes 2"},
+    {"title":"Pesquisar","uri":"/search","initialHTML": "Este é um conteúdo de testes 3"}
+    ]
   })
 
-  .controller('PlaylistsCtrl', function($scope, $http) {
-    $scope.page = {
-      title: 'Projects'
-    }
+  .controller('ExampleCtrl', function($scope, $http) {
 
-    $scope.playlists = [
-    { title: 'Option #1', id: 1 },
-    { title: 'Option #2', id: 2 },
-    { title: 'Option #3', id: 3 },
-    { title: 'Option #4', id: 4 },
-    { title: 'Option #5', id: 5 }
-    ];
   })
-
-  .controller('PlaylistCtrl', function($scope, $stateParams) {
-  })
-  
-  .controller('BrowseCtrl', function($scope) {
-   $scope.page_metadata = {
-    title: 'Setores', initialHTML: 'Este é um conteúdo de testes'
-  };
-});
