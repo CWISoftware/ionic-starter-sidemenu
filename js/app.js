@@ -30,43 +30,14 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       controller: 'AppCtrl'
     })
 
-    .state('app.search', {
-      url: "/search",
-      views: {
-        'menuContent' :{
-          templateUrl: "templates/search.html"
-        }
-      }
-    })
+    //Placeholder for next state code
 
-    .state('app.browse', {
-      url: "/browse",
-      views: {
-        'menuContent' :{
-          templateUrl: "templates/browse.html",
-          controller: 'BrowseCtrl'
-        }
-      }
-    })
-    //
     .state('app.sample', {
       url: "/sample",
       views: {
         'menuContent' :{
           templateUrl: "templates/sample.html",
           controller: 'ExampleCtrl'
-        }
-      }
-    })
-
-     //Placeholder for login state, if it wasn't required on generation please ignore this
-
-    .state('app.single', {
-      url: "/playlists/:playlistId",
-      views: {
-        'menuContent' :{
-          templateUrl: "templates/projeto.html",
-          controller: 'PlaylistCtrl'
         }
       }
     });

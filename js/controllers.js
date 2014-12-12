@@ -12,5 +12,5 @@
   })
 
   .controller('ExampleCtrl', function($scope, $http) {
-
+    $scope.innitialHTML = "Este é um conteúdo de testes";
   })
