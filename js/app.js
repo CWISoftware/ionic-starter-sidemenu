@@ -32,6 +32,8 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 
     //Placeholder for next state code
 
+    //Placeholder for login state, if it wasn't required on generation please ignore this
+
     .state('app.sample', {
       url: "/sample",
       views: {
